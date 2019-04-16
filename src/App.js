@@ -1,19 +1,22 @@
 import React, { Component } from "react";
-import "./App.css";
+import Navbar from "./Components/Navbar/Navbar";
+import { Switch, Route } from "react-router-dom";
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-        </header>
-      </div>
+        <div>
+          <Navbar />
+          <Switch>
+            <Route exact path="/" component={H} />
+            <Route exact path="/login" component={L} />
+            <Route exact path="/register" component={R} />
+            <Route exact path="/profile" component={} />
+          </Switch>
+        
+        </div>
     );
   }
 }
 
 export default App;
-
